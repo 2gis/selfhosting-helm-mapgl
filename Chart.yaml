@@ -1,0 +1,14 @@
+---
+
+apiVersion: v2
+name: mapgl
+description: Basic 2GIS chart template
+
+type: application
+
+version: 0.0.1
+appVersion: 0.0.0
+
+maintainers:
+  - name: team-webmaps
+    email: webmaps@2gis.ru

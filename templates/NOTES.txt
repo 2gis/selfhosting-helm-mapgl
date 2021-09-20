@@ -1,0 +1,5 @@
+Здесь может быть любая ваша информация.
+Этот файл тоже шаблонизируется.
+
+Release - {{ .Release.Name }}
+Namespace - {{ .Release.Namespace }}
