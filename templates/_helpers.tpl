@@ -1,8 +1,8 @@
-{{- define "k8s-starter-kit-helm3.name" -}}
+{{- define "mapgl.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
-{{- define "k8s-starter-kit-helm3.fullname" -}}
+{{- define "mapgl.fullname" -}}
 {{- if .Values.fullnameOverride -}}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
@@ -15,18 +15,18 @@
 {{- end -}}
 {{- end -}}
 
-{{- define "k8s-starter-kit-helm3.chart" -}}
+{{- define "mapgl.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
-{{- define "k8s-starter-kit-helm3.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "k8s-starter-kit-helm3.name" . }}
+{{- define "mapgl.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "mapgl.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
 
-{{- define "k8s-starter-kit-helm3.labels" -}}
-helm.sh/chart: {{ include "k8s-starter-kit-helm3.name" . }}
-{{ include "k8s-starter-kit-helm3.selectorLabels" . }}
+{{- define "mapgl.labels" -}}
+helm.sh/chart: {{ include "mapgl.name" . }}
+{{ include "mapgl.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}

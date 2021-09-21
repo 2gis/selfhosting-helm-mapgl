@@ -3,13 +3,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "k8s-starter-kit-helm3.fullname" . }}
+  name: {{ include "mapgl.fullname" . }}
   {{- if .Values.annotations }}
   annotations:
     {{- toYaml .Values.annotations | nindent 4 }}
   {{- end }}
   labels:
-    {{- include "k8s-starter-kit-helm3.labels" . | nindent 4 }}
+    {{- include "mapgl.labels" . | nindent 4 }}
   {{- if .Values.labels }}
     {{- toYaml .Values.labels | nindent 4 }}
   {{- end }}
@@ -21,7 +21,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "k8s-starter-kit-helm3.selectorLabels" . | nindent 6 }}
+      {{- include "mapgl.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -29,7 +29,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "k8s-starter-kit-helm3.selectorLabels" . | nindent 8 }}
+        {{- include "mapgl.selectorLabels" . | nindent 8 }}
       {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
