@@ -3,9 +3,8 @@
 replicaCount: 1
 
 image:
-  repository: docker-hub.2gis.ru/webmaps/mapgl-selfhosting
+  repository:
   pullPolicy: IfNotPresent
-  tag: test1
 
 imagePullSecrets: []
 nameOverride: ""
@@ -23,19 +22,11 @@ podLabels: {}
 service:
   annotations: {}
   labels: {}
-  type: NodePort
+  type: ClusterIP
   port: 80
 
 ingress:
-  enabled: true
-  className: ""
-  annotations: {}
-  hosts: 
-    - paths:
-        - path: /mapgl
-          pathType: Prefix
-
-  tls: []
+  enabled: false
 
 resources: {}
 

@@ -2,13 +2,13 @@
 
 apiVersion: v2
 name: mapgl
-description: Basic 2GIS chart template
+description: Basic WebGL map chart template for 2GIS SelfHosting
 
 type: application
 
 version: 0.0.1
-appVersion: 0.0.0
+appVersion: 0.0.301
 
 maintainers:
-  - name: team-webmaps
-    email: webmaps@2gis.ru
+  - name: 2GIS dev team
+    email: selfhosting@2gis.com
