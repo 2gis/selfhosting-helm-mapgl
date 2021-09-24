@@ -1,7 +1,7 @@
 ---
 
 apiVersion: v2
-name: mapgl
+name: mapgl-js-api
 description: Basic WebGL map chart template for 2GIS SelfHosting
 
 type: application
