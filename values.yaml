@@ -34,7 +34,7 @@ nodeSelector: {}
 affinity: {}
 tolerations: []
 podDisruptionBudget:
-  enabled: true
+  enabled: false
   maxUnavailable: 1
 
 hpa:
