@@ -1,22 +1,9 @@
-# Helm chart for MapGL service
+MapGL service is released as "{{ .Release.Name }}" service at "{{ .Release.Namespace }}" namespace.
 
-To install this chart clone repo to any local folder and type:
-
-```
-helm install mapgl .
-```
-
-Optionally you can provide additional file with overrides, to customize chart:
-
-```
-helm install mapgl . -f /path/to/overrides.yaml
-```
-
-# Check
+You should publish the service in your preferred way (ingress, balancer, etc).
 
 You can check service operation with this simple map example. 
 
-```html
 <html>
     <head>
         <title>MapGL Selfhosting</title>
@@ -41,4 +28,3 @@ You can check service operation with this simple map example.
     </script>
 </body>
 </html>
-```
