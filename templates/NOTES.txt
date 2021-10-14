@@ -22,7 +22,7 @@ You can check service operation with this simple map example.
             key: 'your key',
             center: [55.31878, 25.23584],
                      
-            style: 'http://mapgl.service.published.host/hardcoded-style/style.json',
+            style: 'http://mapgl.service.published.host/style/',
             zoom: 13,
         });
     </script>
