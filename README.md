@@ -1,4 +1,6 @@
-# 2GIS MapGL JS API (Helm chart)
+# 2GIS MapGL JS API (Archived)
+
+**This repository is ARCHIVED. MapGL JS chart development moved to https://github.com/2gis/on-premise-helm-charts repo.**
 
 This repository contains a [Helm chart](https://helm.sh/docs/topics/charts/) for deploying the MapGL JS API service. This service is part of 2GIS On-Premise services, which allow you to deploy [2GIS products](https://dev.2gis.com/) on your own sites.
 
